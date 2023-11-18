@@ -10,5 +10,12 @@
     "extensions": ["ms-python.python",
                    "ms-azuretools.vscode-docker"],
     "runServices": ["notebook", "jekyll", "watcher"],
-    "postStartCommand": "pip install -e ."
+    "postStartCommand": "pip install -e .",
+    "features": {
+        "ghcr.io/devcontainers/features/nvidia-cuda:1": {
+            "hostRequirements": {
+            "gpu": "optional" 
+          },
+          "installCudnn": true }
+    }
 }
